@@ -1,19 +1,9 @@
 #!/bin/python
-import afunc
+import activation
 import numpy as np
 from numpy import random
 class Layer():
     def __init__(self):
-        pass
-
-class Dropout(Layer):
-    pass
-
-class MaxPooling(Layer):
-    pass
-
-class Convolutional(Layer):
-    def __init__(self, filter_size = [3,3]):
         pass
 
 class Dense(Layer):

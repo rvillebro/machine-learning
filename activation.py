@@ -2,7 +2,7 @@
 import math
 import numpy as np
 
-class activation_function():
+class ActivationFunction():
     __slots__ = ['function', 'function_prime']
     
     def fire(self, inputs):
@@ -18,15 +18,15 @@ class activation_function():
             raise AttributeError('Activation function not defined')
 
 
-class Sigmoid(activation_function):
+class Sigmoid(ActivationFunction):
     def __init__(self):
         self.function = lambda inputs: 1 / (1 + math.e ** - inputs)
 
-class TanH(activation_function):
+class TanH(ActivationFunction):
     def __init__(self):
         self.function = lambda inputs: (math.e ** inputs - math.e ** - inputs) / (math.e ** inputs + math.e ** - inputs)
 
-class ReLU(activation_function):
+class ReLU(ActivationFunction):
     def ReLU(self, inputs):
         inputs[inputs < 0] = 0
         return inputs
@@ -40,7 +40,7 @@ class ReLU(activation_function):
         self.function = self.ReLU
         self.function_prime = self.ReLU_prime
 
-class SoftMax(activation_function):
+class SoftMax(ActivationFunction):
     def softmax(self, inputs):
         esum = (math.e ** inputs).sum()
         return [math.e ** input / esum for input in inputs]
