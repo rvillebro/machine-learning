@@ -4,7 +4,7 @@ import loss
 class NeuralNetwork():
     __slots__ = ['layers', 'loss_function']
     
-    def __init__(self, loss_function = lfunc.MSE()):
+    def __init__(self, loss_function = loss.MSE()):
         self.layers = list()
         self.loss_function = loss_function
 
@@ -14,7 +14,7 @@ class NeuralNetwork():
 
         
         # looping epochs
-        for i in range(epochs):
+        for _ in range(epochs):
             train_data.shuffle()
             
             for X, y in train_data.batch(batch_size):
