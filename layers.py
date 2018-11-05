@@ -2,6 +2,7 @@
 import activation
 import numpy as np
 from numpy import random
+
 class Layer():
     def __init__(self):
         pass
@@ -9,12 +10,13 @@ class Layer():
 class Dense(Layer):
     __slots__ = ['nodes', 'wx', 'weights', 'outputs', 'gradients', 'previous_layer', 'next_layer', 'activation_function']
 
-    def __init__(self, nodes: int, activation_function = afunc.ReLU()):
+    def __init__(self, nodes: int, activation_function = activation.ReLU()):
         self.nodes = nodes
         self.outputs = np.zeros(nodes)
         self.previous_layer = None
         self.next_layer = None
         self.activation_function = activation_function
+        self.gradients = None
     
     def _initialize(self):
         if self.previous_layer is not None:
