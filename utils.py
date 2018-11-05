@@ -11,4 +11,6 @@ class DataSet():
         pass
 
     def shuffle(self):
-        pass
+        shuffle_index = permutation(self.X.shape[0])
+        self.X = self.X[shuffle_index]
+        self.y = self.y[shuffle_index]
