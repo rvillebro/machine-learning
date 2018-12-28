@@ -1,6 +1,15 @@
 #!/bin/python
 import numpy as np
-from numpy.random import permutation
+import random
+
+def shuffle(x, y):
+    tmp = list(zip(x, y))
+    random.shuffle(tmp)
+    x, y = zip(*tmp)
+
+def batch(x, y, batch_size = 10):
+    for i in range(0, x.shape[0], batch_size):
+        yield (x[i:i + batch_size], y[i:i + batch_size])
 
 class DataSet():
     def __init__(self, X, y):
@@ -10,7 +19,5 @@ class DataSet():
     def normalize(self):
         pass
 
-    def shuffle(self):
-        shuffle_index = permutation(self.X.shape[0])
-        self.X = self.X[shuffle_index]
-        self.y = self.y[shuffle_index]
+
+
