@@ -1,18 +1,33 @@
 #!/usr/bin/env python3
-import loss
+from loss_functions import LossFunction, MSE
+from layers import Layer
 from utils import shuffle, batch
 
-class NeuralNetwork():
-    __slots__ = ['layers', 'loss_function']
-    
-    def __init__(self, loss_function: loss.LossFunction = loss.MSE()):
-        self.layers = list()
-        self.loss_function = loss_function
+class Network():
+    def __init__(self):
+        raise NotImplementedError('__init__ function not implemented for {} class'.format(self.__class__.__name__))
+
+    def add(self):
+        raise NotImplementedError('add function not implemented for {} class'.format(self.__class__.__name__))
+
+    def insert(self):
+        raise NotImplementedError('insert function not implemented for {} class'.format(self.__class__.__name__))
+
+    def remove(self):
+        raise NotImplementedError('remove not implemented function for {} class'.format(self.__class__.__name__))
+
+    def train(self):
+        raise NotImplementedError('train not implemented function for {} class'.format(self.__class__.__name__))
 
     def __str__(self):
-        ret_str = '{} with {} layer(s)\n'.format(__class__.__name__, len(self.layers))
+        ret_str = '{} with {} layer(s) and {} as loss function\n'.format(self.__class__.__name__, len(self.layers), self.loss_function)
         ret_str += '\n'.join([str(layer) for layer in self.layers])
         return ret_str
+
+class NeuralNetwork(Network):
+    def __init__(self, loss_function: LossFunction = MSE()):
+        self.layers = list()
+        self.loss_function = loss_function
 
     def train(self, train_x, train_y, test_data=None, batch_size = 10, epochs=1):
         for layer in self.layers:
@@ -39,7 +54,9 @@ class NeuralNetwork():
                 break
 
     #### LAYERS #####
-    def add(self, layer):
+    def add(self, layer: Layer):
+        if not isinstance(layer, Layer):
+            raise TypeError('Please only add subclasses of Layer')
         if self.layers:
             layer.previous_layer = self.layers[-1]
             self.layers[-1].next_layer = layer

@@ -1,8 +1,8 @@
 #!/bin/python
-import nn
+import networks
 import layers
-import activation
-import loss
+import activation_functions
+import loss_functions
 import utils
 
 if __name__ == '__main__':

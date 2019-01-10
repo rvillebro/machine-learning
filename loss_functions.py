@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import numpy as np
 
-
 class LossFunction():   
     def result(self, y, y_hat):
         try:
@@ -13,7 +12,10 @@ class LossFunction():
         try:
             return self.function_derivative(y, y_hat)
         except AttributeError:
-            raise AttributeError('Loss prime function not defined')
+            raise AttributeError('Loss derivative function not defined')
+
+    def __str__(self):
+        return str(self.__class__.__name__)
 
 
 

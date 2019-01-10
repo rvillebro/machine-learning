@@ -1,23 +1,29 @@
 #!/usr/bin/env python3
-import activation
+from activation_functions import ActivationFunction, ReLU
 import numpy as np
 from numpy import random
 
 class Layer():
     def __init__(self):
-        pass
+        raise NotImplementedError('__init__ not implemented in {} class'.format(slef.__class__.__name__))
     
     def _initialize(self):
-        raise NotImplementedError('_initialize not defined in Layer child class')
+        raise NotImplementedError('_initialize not implemented in {} class'.format(slef.__class__.__name__))
 
     def _forward(self):
-        raise NotImplementedError('_forward not defined in Layer child class')
+        raise NotImplementedError('_forward not implemented in {} class'.format(slef.__class__.__name__))
 
     def _backward(self):
-        raise NotImplementedError('_backward not defined in Layer child class')
+        raise NotImplementedError('_backward not implemented in {} class'.format(slef.__class__.__name__))
+    
+    def __str__(self):
+        ret_str = '{} layer with {} node(s) and {} as activation function'.format(self.__class__.__name__, self.nodes, self.activation_function.__class__.__name__)
+        if self.bias:
+            ret_str += ' and bias'
+        return ret_str
 
 class Dense(Layer):
-    def __init__(self, nodes: int, bias: bool = True, activation_function: activation.ActivationFunction = activation.ReLU()):
+    def __init__(self, nodes: int, bias: bool = True, activation_function: ActivationFunction = ReLU()):
         self.nodes = nodes
         self.bias = bias
         self.activation_function = activation_function
@@ -28,9 +34,6 @@ class Dense(Layer):
         self._wx = None
         self._outputs = None
         self._derivatives = None
-        
-    def __str__(self):
-        return '{} layer ({} node(s) with {} activation function)'.format(__class__.__name__, self.nodes, self.activation_function.__class__.__name__)
 
     def _initialize(self):
         # if layer is the input layer weights are not initialized
@@ -57,10 +60,10 @@ class Dense(Layer):
         if self.next_layer is None:
             self._derivatives = self.activation_function.derivative(self._wx) * self._derivatives # delta_afunc / delta_wx  *  delta_E / delta_afunc
         else:
-            afunc_derivative = self.activation_function.derivative(self._wx)
+            #afunc_derivative = self.activation_function.derivative(self._wx)
 
             print(type(self.next_layer._weights), type(self.next_layer._derivatives))
-            etotal = np.matmul(self.next_layer._weights.T, self.next_layer._derivatives.T).T
+            #etotal = np.matmul(self.next_layer._weights.T, self.next_layer._derivatives.T).T
             #print(self.next_layer._weights)
             #print(self.next_layer._derivatives)
             #print(etotal)
