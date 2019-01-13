@@ -28,6 +28,8 @@ class Layer():
             ret_str += ' and bias'
         return ret_str
 
+# comment test
+
 class Dense(Layer):
     def __init__(self, nodes: int, bias: bool = True, activation_function: ActivationFunction = ReLU()):
         if not isinstance(nodes, int):
