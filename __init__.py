@@ -1,4 +1,4 @@
-#!/bin/python
+#!/usr/bin/env python3
 import networks
 import layers
 import activation_functions

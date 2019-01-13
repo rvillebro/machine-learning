@@ -15,6 +15,9 @@ class ActivationFunction():
         except AttributeError:
             raise AttributeError('Activation function derivative not defined')
 
+    def __str__(self):
+        return str(self.__class__.__name__)
+
 
 class ReLU(ActivationFunction):
     def relu_function(self, inputs):
