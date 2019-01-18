@@ -1,8 +1,18 @@
 #!/usr/bin/env python3
+"""
+Activation functions (activation_functions)
+===================================================
+
+This module contains all available activation function for layers: :class:`ReLU`, bla and bla. All activation functions must be a subclass of :class:`ActivationFunction`.
+"""
+
 import math
 import numpy as np
 
 class ActivationFunction():
+    """
+    Superclass for all activation functions. Used for defining which methods must be implemented when implementing a new activation function.
+    """
     def result(self, inputs):
         try:
             return self.function(inputs)
