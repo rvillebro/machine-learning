@@ -6,4 +6,4 @@ import loss_functions
 import utils
 
 if __name__ == '__main__':
-    print('Please import package')
+    print('Please import package, you idiot')
