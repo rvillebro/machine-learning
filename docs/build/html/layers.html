@@ -1,0 +1,319 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Layers (layers) &mdash; machine_learning 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Activation functions (activation_functions)" href="activation_functions.html" />
+    <link rel="prev" title="Loss functions (loss_functions)" href="loss_functions.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> machine_learning
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">Application Programming Interface (API)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="networks.html">Networks (networks)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loss_functions.html">Loss functions (loss_functions)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Layers (layers)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="activation_functions.html">Activation functions (activation_functions)</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">machine_learning</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="api.html">Application Programming Interface (API)</a> &raquo;</li>
+        
+      <li>Layers (layers)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/layers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-layers"></span><div class="section" id="layers-layers">
+<h1>Layers (layers)<a class="headerlink" href="#layers-layers" title="Permalink to this headline">¶</a></h1>
+<p>This module contain all layers available for neural networks: <a class="reference internal" href="#layers.Dense" title="layers.Dense"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dense</span></code></a>. All layers must be a subclass of <a class="reference internal" href="#layers.Layer" title="layers.Layer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Layer</span></code></a>.</p>
+<dl class="class">
+<dt id="layers.Layer">
+<em class="property">class </em><code class="descclassname">layers.</code><code class="descname">Layer</code><a class="reference internal" href="_modules/layers.html#Layer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#layers.Layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Superclass for all layers. Used for defining which methods must be implemented when implementing a new layer.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="layers.Dense">
+<em class="property">class </em><code class="descclassname">layers.</code><code class="descname">Dense</code><span class="sig-paren">(</span><em>nodes: int</em>, <em>bias: bool = True</em>, <em>activation_function: activation_functions.ActivationFunction = &lt;activation_functions.ReLU object&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/layers.html#Dense"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#layers.Dense" title="Permalink to this definition">¶</a></dt>
+<dd><p>A fully connected layer (superclass: <a class="reference internal" href="#layers.Layer" title="layers.Layer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Layer</span></code></a>)</p>
+<dl class="method">
+<dt id="layers.Dense.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>nodes: int</em>, <em>bias: bool = True</em>, <em>activation_function: activation_functions.ActivationFunction = &lt;activation_functions.ReLU object&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/layers.html#Dense.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#layers.Dense.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>nodes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – The number of nodes in the layer.</li>
+<li><strong>bias</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – Whether to include a bias node or not.</li>
+<li><strong>activation_function</strong> (<a class="reference internal" href="activation_functions.html#activation_functions.ActivationFunction" title="activation_functions.ActivationFunction"><em>ActivationFunction</em></a>) – The activation function to use in the layer, must be a subclass of <code class="xref py py-class docutils literal notranslate"><span class="pre">activation_fucntions.ActivationFunction</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="layers.Dense._backward">
+<code class="descname">_backward</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/layers.html#Dense._backward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#layers.Dense._backward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Backward pass</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="layers.Dense._forward">
+<code class="descname">_forward</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/layers.html#Dense._forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#layers.Dense._forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forward pass</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="layers.Dense._initialize">
+<code class="descname">_initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/layers.html#Dense._initialize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#layers.Dense._initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes weights</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="layers.Dense._inputs">
+<code class="descname">_inputs</code><em class="property"> = None</em><a class="headerlink" href="#layers.Dense._inputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inputs to the layer</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="layers.Dense._next_layer">
+<code class="descname">_next_layer</code><em class="property"> = None</em><a class="headerlink" href="#layers.Dense._next_layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The next connected layer</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="layers.Dense._outputs">
+<code class="descname">_outputs</code><em class="property"> = None</em><a class="headerlink" href="#layers.Dense._outputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Outputs of the layer</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="layers.Dense._previous_layer">
+<code class="descname">_previous_layer</code><em class="property"> = None</em><a class="headerlink" href="#layers.Dense._previous_layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The previous connected layer</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="layers.Dense._weights">
+<code class="descname">_weights</code><em class="property"> = None</em><a class="headerlink" href="#layers.Dense._weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weights of the layer</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="layers.Dense.activation_function">
+<code class="descname">activation_function</code><em class="property"> = None</em><a class="headerlink" href="#layers.Dense.activation_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>The activation function of the layer</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="layers.Dense.bias">
+<code class="descname">bias</code><em class="property"> = None</em><a class="headerlink" href="#layers.Dense.bias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether a bias node should be included</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="layers.Dense.nodes">
+<code class="descname">nodes</code><em class="property"> = None</em><a class="headerlink" href="#layers.Dense.nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of nodes in the layer</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="activation_functions.html" class="btn btn-neutral float-right" title="Activation functions (activation_functions)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="loss_functions.html" class="btn btn-neutral" title="Loss functions (loss_functions)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Rasmus Villebro
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"extensions": ["tex2jax.js"], "jax": ["input/TeX", "output/HTML-CSS"]})</script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
