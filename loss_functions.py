@@ -4,7 +4,12 @@ Loss functions (loss_functions)
 ======================================
 
 This module contains all available loss functions for networks: :class:`MSE`, bla and bla. All loss functions must be a subclass of :class:`LossFunction`.
+
+.. codeauthor:: Rasmus Villebro <rasmus-villebro@hotmail.com>
 """
+__version__ = 1.0
+__author__ = 'Rasmus Villebro'
+__email__ = 'rasmus-villebro@hotmail.com'
 
 import numpy as np
 

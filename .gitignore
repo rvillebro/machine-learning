@@ -3,4 +3,4 @@
 test.py
 __pycache__
 *.pyc
-doc/build
+docs/build

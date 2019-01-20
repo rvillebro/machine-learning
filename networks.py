@@ -4,7 +4,12 @@ Networks (networks)
 ==========================
 
 This module contains all available networks: :class:`NeuralNetworks`, bla  and bla. All networks must be a subclass of :class:`Network`.
+
+.. codeauthor:: Rasmus Villebro <rasmus-villebro@hotmail.com>
 """
+__version__ = 1.0
+__author__ = 'Rasmus Villebro'
+__email__ = 'rasmus-villebro@hotmail.com'
 
 
 from loss_functions import LossFunction, MSE

@@ -3,6 +3,3 @@
     .. autoclass:: ActivationFunction
 
     .. autoclass:: ReLU
-        :members:
-        :special-members:
-        :private-members:

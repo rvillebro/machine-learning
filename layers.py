@@ -4,6 +4,8 @@ Layers (layers)
 ======================
 
 This module contain all layers available for neural networks: :class:`Dense`. All layers must be a subclass of :class:`Layer`.
+
+.. codeauthor:: Rasmus Villebro <rasmus-villebro@hotmail.com>
 """
 __version__ = 1.0
 __author__ = 'Rasmus Villebro'

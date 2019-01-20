@@ -4,7 +4,12 @@ Activation functions (activation_functions)
 ===================================================
 
 This module contains all available activation function for layers: :class:`ReLU`, bla and bla. All activation functions must be a subclass of :class:`ActivationFunction`.
+
+.. codeauthor:: Rasmus Villebro <rasmus-villebro@hotmail.com>
 """
+__version__ = 1.0
+__author__ = 'Rasmus Villebro'
+__email__ = 'rasmus-villebro@hotmail.com'
 
 import math
 import numpy as np
@@ -30,6 +35,17 @@ class ActivationFunction():
 
 
 class ReLU(ActivationFunction):
+    """
+    Rectified Linear Unit (ReLU) activation function (superclass: :class:`ActivationFunction`)
+
+    .. math::
+    
+        \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
+
+    ReLU(x) = x if x > 0 otherwise 1
+    
+    ReLU'(x) = 1 if x > 0 otherwise 0
+    """
     def relu_function(self, inputs):
         inputs[inputs < 0] = 0
         return inputs
