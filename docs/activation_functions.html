@@ -165,16 +165,11 @@
 <dl class="class">
 <dt id="activation_functions.ReLU">
 <em class="property">class </em><code class="descclassname">activation_functions.</code><code class="descname">ReLU</code><a class="reference internal" href="_modules/activation_functions.html#ReLU"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#activation_functions.ReLU" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><p>Rectified Linear Unit (ReLU) activation function (superclass: <a class="reference internal" href="#activation_functions.ActivationFunction" title="activation_functions.ActivationFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActivationFunction</span></code></a>)</p>
+<dd><p>Rectified Linear Unit (ReLU) activation function (superclass: <a class="reference internal" href="#activation_functions.ActivationFunction" title="activation_functions.ActivationFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActivationFunction</span></code></a>)</p>
 <div class="math notranslate nohighlight">
-\[\sum_{i=0}^n i^2 = \]</div>
-</div></blockquote>
-<p>rac{(n^2+n)(2n+1)}{6}</p>
-<blockquote>
-<div><p>ReLU(x) = x if x &gt; 0 otherwise 1</p>
+\[ \begin{align}\begin{aligned}ReLU(x) = x if x &gt; 0 otherwise 0\\ReLU'(x) = 1 if x &gt; 0 otherwise 0\end{aligned}\end{align} \]</div>
+<p>ReLU(x) = x if x &gt; 0 otherwise 1</p>
 <p>ReLU’(x) = 1 if x &gt; 0 otherwise 0</p>
-</div></blockquote>
 </dd></dl>
 
 </div>
@@ -223,8 +218,6 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"extensions": ["tex2jax.js"], "jax": ["input/TeX", "output/HTML-CSS"]})</script>
     
 
   
