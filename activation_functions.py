@@ -40,7 +40,9 @@ class ReLU(ActivationFunction):
 
     .. math::
     
-        \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
+        ReLU(x) = x if x > 0 otherwise 0
+
+        ReLU'(x) = 1 if x > 0 otherwise 0
 
     ReLU(x) = x if x > 0 otherwise 1
     
