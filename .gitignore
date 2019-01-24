@@ -1,5 +1,6 @@
+documentation/build/
 .mypy_cache
 .vscode
-test.py
 __pycache__
 *.pyc
+test.py
