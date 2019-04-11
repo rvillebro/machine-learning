@@ -28,13 +28,11 @@ class ReLU(ActivationFunction):
 
     .. math::
     
-        ReLU(x) = x if x > 0 otherwise 0
-
-        ReLU'(x) = 1 if x > 0 otherwise 0
-
-    ReLU(x) = x if x > 0 otherwise 1
+        ReLU(x) = x\ if\ x > 0\ otherwise\ 0
     
-    ReLU'(x) = 1 if x > 0 otherwise 0
+    .. math::
+    
+        ReLU'(x) = 1\ if\ x > 0\ otherwise\ 0
     """
     def relu_function(self, inputs):
         inputs[inputs < 0] = 0

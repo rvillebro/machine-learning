@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Activation functions &mdash; machine_learning 1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Layers" href="layers.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> machine_learning
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install/index.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Application Programming Interface (API)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="networks.html">Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loss_functions.html">Loss functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers.html">Layers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Activation functions</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">machine_learning</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Application Programming Interface (API)</a> &raquo;</li>
+        
+      <li>Activation functions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/activation_functions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-networks.activation_functions"></span><div class="section" id="activation-functions">
+<h1>Activation functions<a class="headerlink" href="#activation-functions" title="Permalink to this headline">¶</a></h1>
+<p>This module contains all available activation function for layers: <a class="reference internal" href="#networks.activation_functions.ReLU" title="networks.activation_functions.ReLU"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReLU</span></code></a>, bla and bla. All activation functions must be a subclass of <a class="reference internal" href="#networks.activation_functions.ActivationFunction" title="networks.activation_functions.ActivationFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActivationFunction</span></code></a>.</p>
+<dl class="class">
+<dt id="networks.activation_functions.ActivationFunction">
+<em class="property">class </em><code class="descclassname">networks.activation_functions.</code><code class="descname">ActivationFunction</code><a class="reference internal" href="../_modules/networks/activation_functions/activation_functions.html#ActivationFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#networks.activation_functions.ActivationFunction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Superclass for all activation functions. Used for defining which methods must be implemented when implementing a new activation function.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="networks.activation_functions.ReLU">
+<em class="property">class </em><code class="descclassname">networks.activation_functions.</code><code class="descname">ReLU</code><a class="reference internal" href="../_modules/networks/activation_functions/activation_functions.html#ReLU"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#networks.activation_functions.ReLU" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rectified Linear Unit (ReLU) activation function (superclass: <a class="reference internal" href="#networks.activation_functions.ActivationFunction" title="networks.activation_functions.ActivationFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActivationFunction</span></code></a>)</p>
+<div class="math notranslate nohighlight">
+\[ReLU(x) = x\ if\ x &gt; 0\ otherwise\ 0\]</div>
+<div class="math notranslate nohighlight">
+\[ReLU'(x) = 1\ if\ x &gt; 0\ otherwise\ 0\]</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="layers.html" class="btn btn-neutral" title="Layers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Rasmus Villebro
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
