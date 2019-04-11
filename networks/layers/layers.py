@@ -35,7 +35,7 @@ class Dense(Layer):
         """
         :param int nodes: The number of nodes in the layer.
         :param bool bias: Whether to include a bias node or not.
-        :param ActivationFunction activation_function: The activation function to use in the layer, must be a subclass of :class:`activation_fucntions.ActivationFunction`.
+        :param ActivationFunction activation_function: The activation function to use in the layer, must be a subclass of :class:`networks.activation_functions.ActivationFunction`.
         """
         if not isinstance(nodes, int):
             raise TypeError('type {} not valid for argument nodes. Please parse an int..'.format(type(nodes)))

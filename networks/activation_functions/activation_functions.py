@@ -26,13 +26,9 @@ class ReLU(ActivationFunction):
     """
     Rectified Linear Unit (ReLU) activation function (superclass: :class:`ActivationFunction`)
 
-    .. math::
+    :math:`ReLU(x) = x` if :math:`x > 0` otherwise :math:`0`
     
-        ReLU(x) = x\ if\ x > 0\ otherwise\ 0
-    
-    .. math::
-    
-        ReLU'(x) = 1\ if\ x > 0\ otherwise\ 0
+    :math:`ReLU\'(x) = 1` if :math:`x > 0` otherwise :math:`0`
     """
     def relu_function(self, inputs):
         inputs[inputs < 0] = 0

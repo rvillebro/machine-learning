@@ -180,7 +180,7 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        :param int nodes: The number of nodes in the layer.</span>
 <span class="sd">        :param bool bias: Whether to include a bias node or not.</span>
-<span class="sd">        :param ActivationFunction activation_function: The activation function to use in the layer, must be a subclass of :class:`activation_fucntions.ActivationFunction`.</span>
+<span class="sd">        :param ActivationFunction activation_function: The activation function to use in the layer, must be a subclass of :class:`networks.activation_functions.ActivationFunction`.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;type </span><span class="si">{}</span><span class="s1"> not valid for argument nodes. Please parse an int..&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">nodes</span><span class="p">)))</span>

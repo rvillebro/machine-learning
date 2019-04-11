@@ -24,14 +24,12 @@ class NeuralNetwork(Network):
     def __init__(self, loss_function: LossFunction = MSE()):
         """
         :param loss_function: The loss function of the network
-        :type loss_function: :class:`loss_functions.LossFunction` 
+        :type loss_function: :class:`networks.loss_functions.LossFunction` 
         """
         if not isinstance(loss_function, LossFunction):
             raise TypeError('type {} not valid for argument loss_function. Please parse a subclass of LossFunction.'.format(type(loss_function)))
         
-        #: The loss function of the network
         self.loss_function = loss_function
-        #: A list of the layers in the network
         self._layers = list()
 
     def train(self, train_x, train_y, test_data=None, batch_size = 10, epochs=1):
