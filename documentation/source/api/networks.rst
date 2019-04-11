@@ -1,8 +1,8 @@
 .. automodule:: networks
 
-    .. autoclass:: Network
+    .. autoclass:: networks.Network
 
-    .. autoclass:: NeuralNetwork
+    .. autoclass:: networks.NeuralNetwork
         :members:
         :special-members:
         :private-members:

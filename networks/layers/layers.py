@@ -1,11 +1,4 @@
 #!/usr/bin/env python3
-"""
-Layers (layers)
-======================
-
-This module contain all layers available for neural networks: :class:`Dense`. All layers must be a subclass of :class:`Layer`.
-"""
-
 from ..activation_functions import ActivationFunction, ReLU
 import numpy as np
 from numpy import random

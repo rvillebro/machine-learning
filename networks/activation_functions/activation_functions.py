@@ -1,11 +1,4 @@
 #!/usr/bin/env python3
-"""
-Activation functions (activation_functions)
-===================================================
-
-This module contains all available activation function for layers: :class:`ReLU`, bla and bla. All activation functions must be a subclass of :class:`ActivationFunction`.
-"""
-
 import math
 import numpy as np
 

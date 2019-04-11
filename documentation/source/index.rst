@@ -10,8 +10,8 @@ Welcome to machine_learning's documentation!
     :maxdepth: 2
     :caption: Contents:
 
-    install
-    api
+    install/index
+    api/index
 
 Indices and tables
 ==================

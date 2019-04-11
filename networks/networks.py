@@ -1,11 +1,4 @@
 #!/usr/bin/env python3
-"""
-Networks (networks)
-==========================
-
-This module contains all available networks: :class:`NeuralNetworks`, bla and bla. All networks must be a subclass of :class:`Network`.
-"""
-
 from .loss_functions import LossFunction, MSE
 from .layers import Layer
 from .utils import shuffle, batch
