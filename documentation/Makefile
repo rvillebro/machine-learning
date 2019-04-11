@@ -19,3 +19,4 @@ help:
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 	rsync -r $(BUILDDIR)/html/* $(DOCSDIR)
+	touch $(DOCSDIR)/.nojekyll
