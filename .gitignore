@@ -5,3 +5,4 @@ __pycache__
 /.venv
 /datasets
 /sphinx/build
+.pytest_cache
