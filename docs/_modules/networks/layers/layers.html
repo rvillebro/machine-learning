@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>networks.layers.layers &mdash; machine_learning 1 documentation</title>
+  <title>networks.layers.layers &mdash; machine-learning 1 documentation</title>
   
 
   
@@ -17,36 +17,40 @@
   
 
   
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"extensions": ["tex2jax.js"], "jax": ["input/TeX", "output/HTML-CSS"]})</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
-
-  
-  <script src="../../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="../../../index.html" class="icon icon-home"> machine_learning
+            <a href="../../../index.html" class="icon icon-home"> machine-learning
           
 
           
@@ -94,7 +98,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../index.html">machine_learning</a>
+          <a href="../../../index.html">machine-learning</a>
         
       </nav>
 
@@ -148,6 +152,7 @@
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">numpy</span> <span class="k">import</span> <span class="n">random</span>
 
+
 <div class="viewcode-block" id="Layer"><a class="viewcode-back" href="../../../api/layers.html#networks.layers.Layer">[docs]</a><span class="k">class</span> <span class="nc">Layer</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Superclass for all layers. Used for defining which methods must be implemented when implementing a new layer.</span>
@@ -155,13 +160,16 @@
     <span class="k">def</span> <span class="nf">__init_subclass__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;__init__&#39;</span><span class="p">,</span> <span class="s1">&#39;_initialize&#39;</span><span class="p">,</span> <span class="s1">&#39;_forward&#39;</span><span class="p">,</span> <span class="s1">&#39;_backward&#39;</span><span class="p">]:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">func</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{func}</span><span class="s1"> method not implemented for </span><span class="si">{cls.__name__}</span><span class="s1"> class. Please implement </span><span class="si">{func}</span><span class="s1"> method.&#39;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+                    <span class="n">f</span><span class="s1">&#39;</span><span class="si">{func}</span><span class="s1"> method not implemented for </span><span class="si">{cls.__name__}</span><span class="s1"> class. Please implement </span><span class="si">{func}</span><span class="s1"> method.&#39;</span><span class="p">)</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">callable</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">func</span><span class="p">)):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{func}</span><span class="s1"> is not callable for class </span><span class="si">{cls.__name__}</span><span class="s1">. Please make sure </span><span class="si">{func}</span><span class="s1"> is a method.&#39;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                    <span class="n">f</span><span class="s1">&#39;</span><span class="si">{func}</span><span class="s1"> is not callable for class </span><span class="si">{cls.__name__}</span><span class="s1">. Please make sure </span><span class="si">{func}</span><span class="s1"> is a method.&#39;</span><span class="p">)</span>
         <span class="nb">super</span><span class="o">.</span><span class="n">__init_subclass__</span><span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
-    
+
     <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">ret_str</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> layer with </span><span class="si">{}</span><span class="s1"> node(s) and </span><span class="si">{}</span><span class="s1"> as activation function&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">activation_function</span><span class="p">)</span>
+        <span class="n">ret_str</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> layer with </span><span class="si">{}</span><span class="s1"> node(s) and </span><span class="si">{}</span><span class="s1"> as activation function&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">activation_function</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias</span><span class="p">:</span>
             <span class="n">ret_str</span> <span class="o">+=</span> <span class="s1">&#39; and bias&#39;</span>
         <span class="k">return</span> <span class="n">ret_str</span>
@@ -172,10 +180,12 @@
     <span class="k">def</span> <span class="nf">is_last</span><span class="p">():</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_next_layer</span> <span class="o">==</span> <span class="kc">None</span></div>
 
+
 <div class="viewcode-block" id="Dense"><a class="viewcode-back" href="../../../api/layers.html#networks.layers.Dense">[docs]</a><span class="k">class</span> <span class="nc">Dense</span><span class="p">(</span><span class="n">Layer</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A fully connected layer (superclass: :class:`Layer`)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
 <div class="viewcode-block" id="Dense.__init__"><a class="viewcode-back" href="../../../api/layers.html#networks.layers.Dense.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">bias</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">activation_function</span><span class="p">:</span> <span class="n">ActivationFunction</span> <span class="o">=</span> <span class="n">ReLU</span><span class="p">()):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        :param int nodes: The number of nodes in the layer.</span>
@@ -183,12 +193,15 @@
 <span class="sd">        :param ActivationFunction activation_function: The activation function to use in the layer, must be a subclass of :class:`networks.activation_functions.ActivationFunction`.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;type </span><span class="si">{}</span><span class="s1"> not valid for argument nodes. Please parse an int..&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">nodes</span><span class="p">)))</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                <span class="s1">&#39;type </span><span class="si">{}</span><span class="s1"> not valid for argument nodes. Please parse an int..&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">nodes</span><span class="p">)))</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">bias</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
-            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;type </span><span class="si">{}</span><span class="s1"> not valid for argument bias. Please parse a bool.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">bias</span><span class="p">)))</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                <span class="s1">&#39;type </span><span class="si">{}</span><span class="s1"> not valid for argument bias. Please parse a bool.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">bias</span><span class="p">)))</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">activation_function</span><span class="p">,</span> <span class="n">ActivationFunction</span><span class="p">):</span>
-            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;type </span><span class="si">{}</span><span class="s1"> not valid for argument activation_function. Please parse a subclass of ActivationFunction.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">activation_function</span><span class="p">)))</span>
-        
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;type </span><span class="si">{}</span><span class="s1"> not valid for argument activation_function. Please parse a subclass of ActivationFunction.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="nb">type</span><span class="p">(</span><span class="n">activation_function</span><span class="p">)))</span>
+
         <span class="c1">#: Number of nodes in the layer</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span> <span class="o">=</span> <span class="n">nodes</span>
         <span class="c1">#: Indicates whether a bias node should be included</span>
@@ -229,38 +242,43 @@
         <span class="c1"># add input bias column</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias</span><span class="p">:</span>
             <span class="n">bias_column</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_inputs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">))</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_inputs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_inputs</span><span class="p">,</span> <span class="n">bias_column</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_inputs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_inputs</span><span class="p">,</span> <span class="n">bias_column</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
         <span class="c1"># calculates outputs</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_wx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_inputs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_weights</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_outputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">activation_function</span><span class="o">.</span><span class="n">result</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_wx</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_outputs</span></div>
 
-
     <span class="k">def</span> <span class="nf">full_multiplication</span><span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="n">inputs</span><span class="p">)</span>
-        
+
 <div class="viewcode-block" id="Dense._backward"><a class="viewcode-back" href="../../../api/layers.html#networks.layers.Dense._backward">[docs]</a>    <span class="k">def</span> <span class="nf">_backward</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Backward pass</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">output_derivatives</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">activation_function</span><span class="o">.</span><span class="n">derivative</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_wx</span><span class="p">)</span> <span class="c1"># d_afunc / d_wx</span>
-        <span class="n">input_derivatives</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inputs</span> <span class="c1"># d_wx / d_weights</span>
+        <span class="n">output_derivatives</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">activation_function</span><span class="o">.</span><span class="n">derivative</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_wx</span><span class="p">)</span>  <span class="c1"># d_afunc / d_wx</span>
+        <span class="n">input_derivatives</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inputs</span>  <span class="c1"># d_wx / d_weights</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_last</span><span class="p">():</span>
             <span class="n">np</span><span class="o">.</span><span class="n">apply_along_axis</span><span class="p">(</span><span class="n">full_multiplication</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_weight_updates</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backprop_pass_on</span> <span class="o">*</span> <span class="n">output_derivatives</span> <span class="o">*</span> <span class="n">input_derivatives</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_backprop_pass_on</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_backprop_pass_on</span> <span class="o">*</span> <span class="n">output_derivatives</span><span class="p">)</span> <span class="c1"># d_ET / d_wx</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_weight_updates</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backprop_pass_on</span> <span class="o">*</span> \
+                <span class="n">output_derivatives</span> <span class="o">*</span> <span class="n">input_derivatives</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_backprop_pass_on</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_backprop_pass_on</span> <span class="o">*</span> <span class="n">output_derivatives</span><span class="p">)</span>  <span class="c1"># d_ET / d_wx</span>
 
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">error_derivatives</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_next_layer</span><span class="o">.</span><span class="n">_weights</span> <span class="c1"># d_error / d_output</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_weight_updates</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backprop_pass_on</span> <span class="o">*</span> <span class="n">error_derivatives</span> <span class="o">*</span> <span class="n">output_derivatives</span> <span class="o">*</span> <span class="n">input_derivatives</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_backprop_pass_on</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backprop_pass_on</span> <span class="o">*</span> <span class="n">error_derivatives</span> <span class="o">*</span> <span class="n">output_derivatives</span>
-            <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_next_layer</span><span class="o">.</span><span class="n">_weights</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_next_layer</span><span class="o">.</span><span class="n">_derivatives</span><span class="p">))</span></div></div>
+            <span class="n">error_derivatives</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_next_layer</span><span class="o">.</span><span class="n">_weights</span>  <span class="c1"># d_error / d_output</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_weight_updates</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backprop_pass_on</span> <span class="o">*</span> \
+                <span class="n">error_derivatives</span> <span class="o">*</span> <span class="n">output_derivatives</span> <span class="o">*</span> <span class="n">input_derivatives</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_backprop_pass_on</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backprop_pass_on</span> <span class="o">*</span> \
+                <span class="n">error_derivatives</span> <span class="o">*</span> <span class="n">output_derivatives</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_next_layer</span><span class="o">.</span><span class="n">_weights</span><span class="p">),</span>
+                  <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_next_layer</span><span class="o">.</span><span class="n">_derivatives</span><span class="p">))</span></div></div>
             <span class="c1">#etotal = np.matmul(self.next_layer._weights.T, self.next_layer._derivatives.T).T</span>
-            <span class="c1">#print(self.next_layer._weights)</span>
-            <span class="c1">#print(self.next_layer._derivatives)</span>
-            <span class="c1">#print(etotal)</span>
+            <span class="c1"># print(self.next_layer._weights)</span>
+            <span class="c1"># print(self.next_layer._derivatives)</span>
+            <span class="c1"># print(etotal)</span>
 </pre></div>
 
            </div>
@@ -290,28 +308,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"extensions": ["tex2jax.js"], "jax": ["input/TeX", "output/HTML-CSS"]})</script>
-    
-
-  
-
-  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

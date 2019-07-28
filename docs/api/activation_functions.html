@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Activation functions &mdash; machine_learning 1 documentation</title>
+  <title>Activation functions &mdash; machine-learning 1 documentation</title>
   
 
   
@@ -17,37 +17,41 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"extensions": ["tex2jax.js"], "jax": ["input/TeX", "output/HTML-CSS"]})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="Layers" href="layers.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="../index.html" class="icon icon-home"> machine_learning
+            <a href="../index.html" class="icon icon-home"> machine-learning
           
 
           
@@ -101,7 +105,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">machine_learning</a>
+          <a href="../index.html">machine-learning</a>
         
       </nav>
 
@@ -158,13 +162,13 @@
 <p>This module contains all available activation function for layers: <a class="reference internal" href="#networks.activation_functions.ReLU" title="networks.activation_functions.ReLU"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReLU</span></code></a>, bla and bla. All activation functions must be a subclass of <a class="reference internal" href="#networks.activation_functions.ActivationFunction" title="networks.activation_functions.ActivationFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActivationFunction</span></code></a>.</p>
 <dl class="class">
 <dt id="networks.activation_functions.ActivationFunction">
-<em class="property">class </em><code class="descclassname">networks.activation_functions.</code><code class="descname">ActivationFunction</code><a class="reference internal" href="../_modules/networks/activation_functions/activation_functions.html#ActivationFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#networks.activation_functions.ActivationFunction" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">networks.activation_functions.</code><code class="sig-name descname">ActivationFunction</code><a class="reference internal" href="../_modules/networks/activation_functions/activation_functions.html#ActivationFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#networks.activation_functions.ActivationFunction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Superclass for all activation functions. Used for defining which methods must be implemented when implementing a new activation function.</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="networks.activation_functions.ReLU">
-<em class="property">class </em><code class="descclassname">networks.activation_functions.</code><code class="descname">ReLU</code><a class="reference internal" href="../_modules/networks/activation_functions/activation_functions.html#ReLU"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#networks.activation_functions.ReLU" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">networks.activation_functions.</code><code class="sig-name descname">ReLU</code><a class="reference internal" href="../_modules/networks/activation_functions/activation_functions.html#ReLU"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#networks.activation_functions.ReLU" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rectified Linear Unit (ReLU) activation function (superclass: <a class="reference internal" href="#networks.activation_functions.ActivationFunction" title="networks.activation_functions.ActivationFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActivationFunction</span></code></a>)</p>
 <p><span class="math notranslate nohighlight">\(ReLU(x) = x\)</span> if <span class="math notranslate nohighlight">\(x &gt; 0\)</span> otherwise <span class="math notranslate nohighlight">\(0\)</span></p>
 <p><span class="math notranslate nohighlight">\(ReLU'(x) = 1\)</span> if <span class="math notranslate nohighlight">\(x &gt; 0\)</span> otherwise <span class="math notranslate nohighlight">\(0\)</span></p>
@@ -181,7 +185,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="layers.html" class="btn btn-neutral" title="Layers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="layers.html" class="btn btn-neutral float-left" title="Layers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -207,28 +211,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"extensions": ["tex2jax.js"], "jax": ["input/TeX", "output/HTML-CSS"]})</script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

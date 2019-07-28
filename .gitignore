@@ -1,6 +1,7 @@
-documentation/build/
 .mypy_cache
 .vscode
 __pycache__
 *.pyc
-test.py
+/.venv
+/datasets
+/sphinx/build
