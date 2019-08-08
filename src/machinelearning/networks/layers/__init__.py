@@ -5,5 +5,4 @@ Layers
 
 This module contain all layers available for neural networks: :class:`Dense`. All layers must be a subclass of :class:`Layer`.
 """
-
-from .layers import *
+from .layers import Layer, Dense

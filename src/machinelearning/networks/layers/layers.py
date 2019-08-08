@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from ..activation_functions import ActivationFunction, ReLU
+from machinelearning.networks.activation_functions import ActivationFunction, ReLU
 import numpy as np
 from numpy import random
 

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import machinelearning.networks
 
-__all__ = ['networks']
+__author__ = "Rasmus Villebro"
+__email__ = "rasmus-villebro@hotmail.com"
 __version__ = "0.1"

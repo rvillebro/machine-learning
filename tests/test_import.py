@@ -2,11 +2,10 @@
 import pytest
 
 
-def test_networks():
+def test_version():
     from machinelearning import __version__
 
     assert __version__ == "0.1"
-    return
 
 
 if __name__ == "__main__":
