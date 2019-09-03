@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Networks &mdash; machine-learning 1 documentation</title>
+  <title>&lt;no title&gt; &mdash; machine-learning 1 documentation</title>
   
 
   
@@ -37,7 +37,6 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Loss functions" href="loss_functions.html" />
     <link rel="prev" title="Application Programming Interface (API)" href="index.html" /> 
 </head>
 
@@ -83,15 +82,9 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../install/index.html">Installation</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Application Programming Interface (API)</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Networks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="loss_functions.html">Loss functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="layers.html">Layers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="activation_functions.html">Activation functions</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Application Programming Interface (API)</a></li>
 </ul>
 
             
@@ -139,7 +132,7 @@
         
           <li><a href="index.html">Application Programming Interface (API)</a> &raquo;</li>
         
-      <li>Networks</li>
+      <li>&lt;no title&gt;</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -158,60 +151,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <span class="target" id="module-networks"></span><div class="section" id="networks">
-<h1>Networks<a class="headerlink" href="#networks" title="Permalink to this headline">¶</a></h1>
-<p>This module contains all available networks: <a class="reference internal" href="#networks.NeuralNetwork" title="networks.NeuralNetwork"><code class="xref py py-class docutils literal notranslate"><span class="pre">NeuralNetwork</span></code></a>, bla and bla. All networks must be a subclass of <a class="reference internal" href="#networks.Network" title="networks.Network"><code class="xref py py-class docutils literal notranslate"><span class="pre">Network</span></code></a>.</p>
-<dl class="class">
-<dt id="networks.Network">
-<em class="property">class </em><code class="sig-prename descclassname">networks.</code><code class="sig-name descname">Network</code><a class="reference internal" href="../_modules/networks/networks.html#Network"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#networks.Network" title="Permalink to this definition">¶</a></dt>
-<dd><p>Superclass for all networks. Used for defining which methods must be implemented when implementing a new network.</p>
-</dd></dl>
-
-<dl class="class">
-<dt id="networks.NeuralNetwork">
-<em class="property">class </em><code class="sig-prename descclassname">networks.</code><code class="sig-name descname">NeuralNetwork</code><span class="sig-paren">(</span><em class="sig-param">loss_function: networks.loss_functions.loss_functions.LossFunction = &lt;networks.loss_functions.loss_functions.MSE object&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/networks/networks.html#NeuralNetwork"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#networks.NeuralNetwork" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="method">
-<dt id="networks.NeuralNetwork.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">loss_function: networks.loss_functions.loss_functions.LossFunction = &lt;networks.loss_functions.loss_functions.MSE object&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/networks/networks.html#NeuralNetwork.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#networks.NeuralNetwork.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>loss_function</strong> (<a class="reference internal" href="loss_functions.html#networks.loss_functions.LossFunction" title="networks.loss_functions.LossFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">networks.loss_functions.LossFunction</span></code></a>) – The loss function of the network</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="networks.NeuralNetwork.predict">
-<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/networks/networks.html#NeuralNetwork.predict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#networks.NeuralNetwork.predict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Give output of the network from the parsed data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>x</strong> – The data for which predictions should be made</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Prediction for parsed data x</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="networks.NeuralNetwork.train">
-<code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">train_x</em>, <em class="sig-param">train_y</em>, <em class="sig-param">test_data=None</em>, <em class="sig-param">batch_size=10</em>, <em class="sig-param">epochs=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/networks/networks.html#NeuralNetwork.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#networks.NeuralNetwork.train" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>train_X</strong> – The training data set</p></li>
-<li><p><strong>train_y</strong> – The training validation set</p></li>
-<li><p><strong>test_data</strong> – test data</p></li>
-<li><p><strong>batch_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – The batch size before updating weights</p></li>
-<li><p><strong>epochs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – The number of epochs to train</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+  <div class="toctree-wrapper compound">
 </div>
 
 
@@ -221,8 +161,6 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="loss_functions.html" class="btn btn-neutral float-right" title="Loss functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="Application Programming Interface (API)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

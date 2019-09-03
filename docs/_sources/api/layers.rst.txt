@@ -1,8 +1,8 @@
-.. automodule:: networks.layers
+.. automodule:: machinelearning.networks.layers
 
-    .. autoclass:: networks.layers.Layer
+    .. autoclass:: machinelearning.networks.layers.Layer
 
-    .. autoclass:: networks.layers.Dense
+    .. autoclass:: machinelearning.networks.layers.Dense
         :members:
         :private-members:
         :special-members:

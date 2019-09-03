@@ -1,5 +1,5 @@
-.. automodule:: networks.activation_functions
+.. automodule:: machinelearning.networks.activation_functions
 
-    .. autoclass:: networks.activation_functions.ActivationFunction
+    .. autoclass:: machinelearning.networks.activation_functions.ActivationFunction
 
-    .. autoclass:: networks.activation_functions.ReLU
+    .. autoclass:: machinelearning.networks.activation_functions.ReLU

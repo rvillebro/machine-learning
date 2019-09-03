@@ -86,10 +86,10 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install/index.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Application Programming Interface (API)</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="networks.html">Networks</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Loss functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="layers.html">Layers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="activation_functions.html">Activation functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.html">Networks</a></li>
 </ul>
 </li>
 </ul>
@@ -139,6 +139,8 @@
         
           <li><a href="index.html">Application Programming Interface (API)</a> &raquo;</li>
         
+          <li><a href="networks.html">Networks</a> &raquo;</li>
+        
       <li>Loss functions</li>
     
     
@@ -158,22 +160,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <span class="target" id="module-networks.loss_functions"></span><div class="section" id="loss-functions">
+  <span class="target" id="module-machinelearning.networks.loss_functions"></span><div class="section" id="loss-functions">
 <h1>Loss functions<a class="headerlink" href="#loss-functions" title="Permalink to this headline">¶</a></h1>
-<p>This module contains all available loss functions for networks: <a class="reference internal" href="#networks.loss_functions.MSE" title="networks.loss_functions.MSE"><code class="xref py py-class docutils literal notranslate"><span class="pre">MSE</span></code></a>, bla and bla. All loss functions must be a subclass of <a class="reference internal" href="#networks.loss_functions.LossFunction" title="networks.loss_functions.LossFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">LossFunction</span></code></a>.</p>
+<p>This module contains all available loss functions for networks: <a class="reference internal" href="#machinelearning.networks.loss_functions.MSE" title="machinelearning.networks.loss_functions.MSE"><code class="xref py py-class docutils literal notranslate"><span class="pre">MSE</span></code></a>, bla and bla. All loss functions must be a subclass of <a class="reference internal" href="#machinelearning.networks.loss_functions.LossFunction" title="machinelearning.networks.loss_functions.LossFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">LossFunction</span></code></a>.</p>
 <dl class="class">
-<dt id="networks.loss_functions.LossFunction">
-<em class="property">class </em><code class="sig-prename descclassname">networks.loss_functions.</code><code class="sig-name descname">LossFunction</code><a class="reference internal" href="../_modules/networks/loss_functions/loss_functions.html#LossFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#networks.loss_functions.LossFunction" title="Permalink to this definition">¶</a></dt>
+<dt id="machinelearning.networks.loss_functions.LossFunction">
+<em class="property">class </em><code class="sig-prename descclassname">machinelearning.networks.loss_functions.</code><code class="sig-name descname">LossFunction</code><a class="reference internal" href="../_modules/machinelearning/networks/loss_functions/loss_functions.html#LossFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#machinelearning.networks.loss_functions.LossFunction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Superclass for all loss functions. Used for defining which methods must be implemented when implementing a new loss function.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="networks.loss_functions.MSE">
-<em class="property">class </em><code class="sig-prename descclassname">networks.loss_functions.</code><code class="sig-name descname">MSE</code><a class="reference internal" href="../_modules/networks/loss_functions/loss_functions.html#MSE"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#networks.loss_functions.MSE" title="Permalink to this definition">¶</a></dt>
+<dt id="machinelearning.networks.loss_functions.MSE">
+<em class="property">class </em><code class="sig-prename descclassname">machinelearning.networks.loss_functions.</code><code class="sig-name descname">MSE</code><a class="reference internal" href="../_modules/machinelearning/networks/loss_functions/loss_functions.html#MSE"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#machinelearning.networks.loss_functions.MSE" title="Permalink to this definition">¶</a></dt>
 <dd><p>MSE loss function</p>
 <dl class="method">
-<dt id="networks.loss_functions.MSE.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/networks/loss_functions/loss_functions.html#MSE.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#networks.loss_functions.MSE.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="machinelearning.networks.loss_functions.MSE.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/machinelearning/networks/loss_functions/loss_functions.html#MSE.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#machinelearning.networks.loss_functions.MSE.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 

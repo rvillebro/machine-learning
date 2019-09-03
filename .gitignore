@@ -2,7 +2,7 @@
 .vscode
 __pycache__
 *.pyc
-/.venv
-/datasets
-/sphinx/build
+.venv
+datasets
+sphinx/build
 .pytest_cache

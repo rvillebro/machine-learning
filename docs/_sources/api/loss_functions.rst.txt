@@ -1,8 +1,8 @@
-.. automodule:: networks.loss_functions
+.. automodule:: machinelearning.networks.loss_functions
 
-    .. autoclass:: networks.loss_functions.LossFunction
+    .. autoclass:: machinelearning.networks.loss_functions.LossFunction
 
-    .. autoclass:: networks.loss_functions.MSE
+    .. autoclass:: machinelearning.networks.loss_functions.MSE
         :members:
         :special-members:
         :private-members:

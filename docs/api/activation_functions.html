@@ -85,10 +85,10 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../install/index.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Application Programming Interface (API)</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="networks.html">Networks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loss_functions.html">Loss functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="layers.html">Layers</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Activation functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.html">Networks</a></li>
 </ul>
 </li>
 </ul>
@@ -138,6 +138,8 @@
         
           <li><a href="index.html">Application Programming Interface (API)</a> &raquo;</li>
         
+          <li><a href="networks.html">Networks</a> &raquo;</li>
+        
       <li>Activation functions</li>
     
     
@@ -157,19 +159,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <span class="target" id="module-networks.activation_functions"></span><div class="section" id="activation-functions">
+  <span class="target" id="module-machinelearning.networks.activation_functions"></span><div class="section" id="activation-functions">
 <h1>Activation functions<a class="headerlink" href="#activation-functions" title="Permalink to this headline">¶</a></h1>
-<p>This module contains all available activation function for layers: <a class="reference internal" href="#networks.activation_functions.ReLU" title="networks.activation_functions.ReLU"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReLU</span></code></a>, bla and bla. All activation functions must be a subclass of <a class="reference internal" href="#networks.activation_functions.ActivationFunction" title="networks.activation_functions.ActivationFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActivationFunction</span></code></a>.</p>
+<p>This module contains all available activation function for layers: <a class="reference internal" href="#machinelearning.networks.activation_functions.ReLU" title="machinelearning.networks.activation_functions.ReLU"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReLU</span></code></a>, bla and bla. All activation functions must be a subclass of <a class="reference internal" href="#machinelearning.networks.activation_functions.ActivationFunction" title="machinelearning.networks.activation_functions.ActivationFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActivationFunction</span></code></a>.</p>
 <dl class="class">
-<dt id="networks.activation_functions.ActivationFunction">
-<em class="property">class </em><code class="sig-prename descclassname">networks.activation_functions.</code><code class="sig-name descname">ActivationFunction</code><a class="reference internal" href="../_modules/networks/activation_functions/activation_functions.html#ActivationFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#networks.activation_functions.ActivationFunction" title="Permalink to this definition">¶</a></dt>
+<dt id="machinelearning.networks.activation_functions.ActivationFunction">
+<em class="property">class </em><code class="sig-prename descclassname">machinelearning.networks.activation_functions.</code><code class="sig-name descname">ActivationFunction</code><a class="reference internal" href="../_modules/machinelearning/networks/activation_functions/activation_functions.html#ActivationFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#machinelearning.networks.activation_functions.ActivationFunction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Superclass for all activation functions. Used for defining which methods must be implemented when implementing a new activation function.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="networks.activation_functions.ReLU">
-<em class="property">class </em><code class="sig-prename descclassname">networks.activation_functions.</code><code class="sig-name descname">ReLU</code><a class="reference internal" href="../_modules/networks/activation_functions/activation_functions.html#ReLU"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#networks.activation_functions.ReLU" title="Permalink to this definition">¶</a></dt>
-<dd><p>Rectified Linear Unit (ReLU) activation function (superclass: <a class="reference internal" href="#networks.activation_functions.ActivationFunction" title="networks.activation_functions.ActivationFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActivationFunction</span></code></a>)</p>
+<dt id="machinelearning.networks.activation_functions.ReLU">
+<em class="property">class </em><code class="sig-prename descclassname">machinelearning.networks.activation_functions.</code><code class="sig-name descname">ReLU</code><a class="reference internal" href="../_modules/machinelearning/networks/activation_functions/activation_functions.html#ReLU"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#machinelearning.networks.activation_functions.ReLU" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rectified Linear Unit (ReLU) activation function (superclass: <a class="reference internal" href="#machinelearning.networks.activation_functions.ActivationFunction" title="machinelearning.networks.activation_functions.ActivationFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">ActivationFunction</span></code></a>)</p>
 <p><span class="math notranslate nohighlight">\(ReLU(x) = x\)</span> if <span class="math notranslate nohighlight">\(x &gt; 0\)</span> otherwise <span class="math notranslate nohighlight">\(0\)</span></p>
 <p><span class="math notranslate nohighlight">\(ReLU'(x) = 1\)</span> if <span class="math notranslate nohighlight">\(x &gt; 0\)</span> otherwise <span class="math notranslate nohighlight">\(0\)</span></p>
 </dd></dl>

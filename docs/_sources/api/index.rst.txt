@@ -6,7 +6,4 @@ Application Programming Interface (API)
     :maxdepth: 2
     :caption: Contents:
 
-    networks
-    loss_functions
-    layers
-    activation_functions
+    networks/index
